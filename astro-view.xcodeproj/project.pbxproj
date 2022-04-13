@@ -1,0 +1,771 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F400DC728062BA200B889FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400DC628062BA200B889FC /* AppDelegate.swift */; };
+		9F400DC928062BA200B889FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400DC828062BA200B889FC /* SceneDelegate.swift */; };
+		9F400DD028062BA500B889FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F400DCF28062BA500B889FC /* Assets.xcassets */; };
+		9F400DD328062BA500B889FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F400DD128062BA500B889FC /* LaunchScreen.storyboard */; };
+		9F400DDE28062BA500B889FC /* astro_viewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400DDD28062BA500B889FC /* astro_viewTests.swift */; };
+		9F400DE828062BA500B889FC /* astro_viewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400DE728062BA500B889FC /* astro_viewUITests.swift */; };
+		9F400DEA28062BA500B889FC /* astro_viewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400DE928062BA500B889FC /* astro_viewUITestsLaunchTests.swift */; };
+		9F400DFD2806304800B889FC /* AstronomyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400DFC2806304800B889FC /* AstronomyViewController.swift */; };
+		9F400E01280630DB00B889FC /* AstronomyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E00280630DB00B889FC /* AstronomyModule.swift */; };
+		9F400E032806312800B889FC /* Astronomy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F400E022806312800B889FC /* Astronomy.storyboard */; };
+		9F400E052806315900B889FC /* AstronomyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E042806315900B889FC /* AstronomyPresenter.swift */; };
+		9F400E07280633B900B889FC /* AstronomyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E06280633B900B889FC /* AstronomyInteractor.swift */; };
+		9F400E0C28063A9C00B889FC /* SceneBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E0B28063A9C00B889FC /* SceneBuilder.swift */; };
+		9F400E1028063C5200B889FC /* UIStoryboard+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E0F28063C5200B889FC /* UIStoryboard+Extentions.swift */; };
+		9F400E1328063FE100B889FC /* StoryboardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E1228063FE100B889FC /* StoryboardConstants.swift */; };
+		9F400E16280642BF00B889FC /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E15280642BF00B889FC /* StoryboardIdentifiable.swift */; };
+		9F400E1828064CEF00B889FC /* AstronomyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E1728064CEF00B889FC /* AstronomyModels.swift */; };
+		9F400E1C28064F8000B889FC /* AstronomyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E1B28064F8000B889FC /* AstronomyRouter.swift */; };
+		9F400E1E28064FA400B889FC /* AstronomyRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E1D28064FA400B889FC /* AstronomyRoute.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F400DDA28062BA500B889FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F400DBB28062BA200B889FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F400DC228062BA200B889FC;
+			remoteInfo = "astro-view";
+		};
+		9F400DE428062BA500B889FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F400DBB28062BA200B889FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F400DC228062BA200B889FC;
+			remoteInfo = "astro-view";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F400DC328062BA200B889FC /* astro-view.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "astro-view.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F400DC628062BA200B889FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9F400DC828062BA200B889FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9F400DCF28062BA500B889FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F400DD228062BA500B889FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9F400DD428062BA500B889FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F400DD928062BA500B889FC /* astro-viewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "astro-viewTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F400DDD28062BA500B889FC /* astro_viewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = astro_viewTests.swift; sourceTree = "<group>"; };
+		9F400DE328062BA500B889FC /* astro-viewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "astro-viewUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F400DE728062BA500B889FC /* astro_viewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = astro_viewUITests.swift; sourceTree = "<group>"; };
+		9F400DE928062BA500B889FC /* astro_viewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = astro_viewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9F400DFC2806304800B889FC /* AstronomyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyViewController.swift; sourceTree = "<group>"; };
+		9F400E00280630DB00B889FC /* AstronomyModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyModule.swift; sourceTree = "<group>"; };
+		9F400E022806312800B889FC /* Astronomy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Astronomy.storyboard; sourceTree = "<group>"; };
+		9F400E042806315900B889FC /* AstronomyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPresenter.swift; sourceTree = "<group>"; };
+		9F400E06280633B900B889FC /* AstronomyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyInteractor.swift; sourceTree = "<group>"; };
+		9F400E0B28063A9C00B889FC /* SceneBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneBuilder.swift; sourceTree = "<group>"; };
+		9F400E0F28063C5200B889FC /* UIStoryboard+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extentions.swift"; sourceTree = "<group>"; };
+		9F400E1228063FE100B889FC /* StoryboardConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardConstants.swift; sourceTree = "<group>"; };
+		9F400E15280642BF00B889FC /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
+		9F400E1728064CEF00B889FC /* AstronomyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyModels.swift; sourceTree = "<group>"; };
+		9F400E1B28064F8000B889FC /* AstronomyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyRouter.swift; sourceTree = "<group>"; };
+		9F400E1D28064FA400B889FC /* AstronomyRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyRoute.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F400DC028062BA200B889FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F400DD628062BA500B889FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F400DE028062BA500B889FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F400DBA28062BA200B889FC = {
+			isa = PBXGroup;
+			children = (
+				9F400DC528062BA200B889FC /* astro-view */,
+				9F400DDC28062BA500B889FC /* astro-viewTests */,
+				9F400DE628062BA500B889FC /* astro-viewUITests */,
+				9F400DC428062BA200B889FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F400DC428062BA200B889FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F400DC328062BA200B889FC /* astro-view.app */,
+				9F400DD928062BA500B889FC /* astro-viewTests.xctest */,
+				9F400DE328062BA500B889FC /* astro-viewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F400DC528062BA200B889FC /* astro-view */ = {
+			isa = PBXGroup;
+			children = (
+				9F400DF628062CE600B889FC /* Application Delegates */,
+				9F400DFA28062F1000B889FC /* Scenes */,
+				9F400E1928064F4000B889FC /* Routers */,
+				9F400DFE2806308B00B889FC /* ModuleBuilders */,
+				9F400DF928062D6300B889FC /* Storyboards */,
+				9F400E0D28063B4500B889FC /* Common */,
+				9F400DF728062D0500B889FC /* Assets */,
+				9F400DF828062D1F00B889FC /* Supporting Files */,
+			);
+			path = "astro-view";
+			sourceTree = "<group>";
+		};
+		9F400DDC28062BA500B889FC /* astro-viewTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F400DDD28062BA500B889FC /* astro_viewTests.swift */,
+			);
+			path = "astro-viewTests";
+			sourceTree = "<group>";
+		};
+		9F400DE628062BA500B889FC /* astro-viewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9F400DE728062BA500B889FC /* astro_viewUITests.swift */,
+				9F400DE928062BA500B889FC /* astro_viewUITestsLaunchTests.swift */,
+			);
+			path = "astro-viewUITests";
+			sourceTree = "<group>";
+		};
+		9F400DF628062CE600B889FC /* Application Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				9F400DC628062BA200B889FC /* AppDelegate.swift */,
+				9F400DC828062BA200B889FC /* SceneDelegate.swift */,
+			);
+			path = "Application Delegates";
+			sourceTree = "<group>";
+		};
+		9F400DF728062D0500B889FC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9F400DCF28062BA500B889FC /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		9F400DF828062D1F00B889FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F400DD428062BA500B889FC /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F400DF928062D6300B889FC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9F400DD128062BA500B889FC /* LaunchScreen.storyboard */,
+				9F400E022806312800B889FC /* Astronomy.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9F400DFA28062F1000B889FC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9F400DFB2806300B00B889FC /* AstronomyView */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		9F400DFB2806300B00B889FC /* AstronomyView */ = {
+			isa = PBXGroup;
+			children = (
+				9F400DFC2806304800B889FC /* AstronomyViewController.swift */,
+				9F400E06280633B900B889FC /* AstronomyInteractor.swift */,
+				9F400E042806315900B889FC /* AstronomyPresenter.swift */,
+				9F400E1728064CEF00B889FC /* AstronomyModels.swift */,
+			);
+			path = AstronomyView;
+			sourceTree = "<group>";
+		};
+		9F400DFE2806308B00B889FC /* ModuleBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				9F400E0B28063A9C00B889FC /* SceneBuilder.swift */,
+				9F400DFF2806309B00B889FC /* AstronomyView */,
+			);
+			path = ModuleBuilders;
+			sourceTree = "<group>";
+		};
+		9F400DFF2806309B00B889FC /* AstronomyView */ = {
+			isa = PBXGroup;
+			children = (
+				9F400E00280630DB00B889FC /* AstronomyModule.swift */,
+			);
+			path = AstronomyView;
+			sourceTree = "<group>";
+		};
+		9F400E0D28063B4500B889FC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9F400E142806404500B889FC /* Protocols */,
+				9F400E1128063FC900B889FC /* Constants */,
+				9F400E0E28063C2D00B889FC /* Extentions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9F400E0E28063C2D00B889FC /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				9F400E0F28063C5200B889FC /* UIStoryboard+Extentions.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		9F400E1128063FC900B889FC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9F400E1228063FE100B889FC /* StoryboardConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		9F400E142806404500B889FC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9F400E15280642BF00B889FC /* StoryboardIdentifiable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9F400E1928064F4000B889FC /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				9F400E1A28064F4C00B889FC /* Astronomy */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		9F400E1A28064F4C00B889FC /* Astronomy */ = {
+			isa = PBXGroup;
+			children = (
+				9F400E1B28064F8000B889FC /* AstronomyRouter.swift */,
+				9F400E1D28064FA400B889FC /* AstronomyRoute.swift */,
+			);
+			path = Astronomy;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F400DC228062BA200B889FC /* astro-view */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F400DED28062BA500B889FC /* Build configuration list for PBXNativeTarget "astro-view" */;
+			buildPhases = (
+				9F400DBF28062BA200B889FC /* Sources */,
+				9F400DC028062BA200B889FC /* Frameworks */,
+				9F400DC128062BA200B889FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "astro-view";
+			productName = "astro-view";
+			productReference = 9F400DC328062BA200B889FC /* astro-view.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F400DD828062BA500B889FC /* astro-viewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F400DF028062BA500B889FC /* Build configuration list for PBXNativeTarget "astro-viewTests" */;
+			buildPhases = (
+				9F400DD528062BA500B889FC /* Sources */,
+				9F400DD628062BA500B889FC /* Frameworks */,
+				9F400DD728062BA500B889FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F400DDB28062BA500B889FC /* PBXTargetDependency */,
+			);
+			name = "astro-viewTests";
+			productName = "astro-viewTests";
+			productReference = 9F400DD928062BA500B889FC /* astro-viewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9F400DE228062BA500B889FC /* astro-viewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F400DF328062BA500B889FC /* Build configuration list for PBXNativeTarget "astro-viewUITests" */;
+			buildPhases = (
+				9F400DDF28062BA500B889FC /* Sources */,
+				9F400DE028062BA500B889FC /* Frameworks */,
+				9F400DE128062BA500B889FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F400DE528062BA500B889FC /* PBXTargetDependency */,
+			);
+			name = "astro-viewUITests";
+			productName = "astro-viewUITests";
+			productReference = 9F400DE328062BA500B889FC /* astro-viewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F400DBB28062BA200B889FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					9F400DC228062BA200B889FC = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					9F400DD828062BA500B889FC = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 9F400DC228062BA200B889FC;
+					};
+					9F400DE228062BA500B889FC = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 9F400DC228062BA200B889FC;
+					};
+				};
+			};
+			buildConfigurationList = 9F400DBE28062BA200B889FC /* Build configuration list for PBXProject "astro-view" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F400DBA28062BA200B889FC;
+			productRefGroup = 9F400DC428062BA200B889FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F400DC228062BA200B889FC /* astro-view */,
+				9F400DD828062BA500B889FC /* astro-viewTests */,
+				9F400DE228062BA500B889FC /* astro-viewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F400DC128062BA200B889FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F400E032806312800B889FC /* Astronomy.storyboard in Resources */,
+				9F400DD328062BA500B889FC /* LaunchScreen.storyboard in Resources */,
+				9F400DD028062BA500B889FC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F400DD728062BA500B889FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F400DE128062BA500B889FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F400DBF28062BA200B889FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F400DC728062BA200B889FC /* AppDelegate.swift in Sources */,
+				9F400E1C28064F8000B889FC /* AstronomyRouter.swift in Sources */,
+				9F400E1828064CEF00B889FC /* AstronomyModels.swift in Sources */,
+				9F400E07280633B900B889FC /* AstronomyInteractor.swift in Sources */,
+				9F400DFD2806304800B889FC /* AstronomyViewController.swift in Sources */,
+				9F400E1328063FE100B889FC /* StoryboardConstants.swift in Sources */,
+				9F400E16280642BF00B889FC /* StoryboardIdentifiable.swift in Sources */,
+				9F400E1028063C5200B889FC /* UIStoryboard+Extentions.swift in Sources */,
+				9F400E1E28064FA400B889FC /* AstronomyRoute.swift in Sources */,
+				9F400E0C28063A9C00B889FC /* SceneBuilder.swift in Sources */,
+				9F400E01280630DB00B889FC /* AstronomyModule.swift in Sources */,
+				9F400DC928062BA200B889FC /* SceneDelegate.swift in Sources */,
+				9F400E052806315900B889FC /* AstronomyPresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F400DD528062BA500B889FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F400DDE28062BA500B889FC /* astro_viewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F400DDF28062BA500B889FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F400DE828062BA500B889FC /* astro_viewUITests.swift in Sources */,
+				9F400DEA28062BA500B889FC /* astro_viewUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F400DDB28062BA500B889FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F400DC228062BA200B889FC /* astro-view */;
+			targetProxy = 9F400DDA28062BA500B889FC /* PBXContainerItemProxy */;
+		};
+		9F400DE528062BA500B889FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F400DC228062BA200B889FC /* astro-view */;
+			targetProxy = 9F400DE428062BA500B889FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F400DD128062BA500B889FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F400DD228062BA500B889FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F400DEB28062BA500B889FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9F400DEC28062BA500B889FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F400DEE28062BA500B889FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QFKM74BY63;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "astro-view/Supporting Files/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.regor.assignment.astro-view";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F400DEF28062BA500B889FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QFKM74BY63;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "astro-view/Supporting Files/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.regor.assignment.astro-view";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9F400DF128062BA500B889FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QFKM74BY63;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.regor.assignment.astro-viewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/astro-view.app/astro-view";
+			};
+			name = Debug;
+		};
+		9F400DF228062BA500B889FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QFKM74BY63;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.regor.assignment.astro-viewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/astro-view.app/astro-view";
+			};
+			name = Release;
+		};
+		9F400DF428062BA500B889FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QFKM74BY63;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.regor.assignment.astro-viewUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "astro-view";
+			};
+			name = Debug;
+		};
+		9F400DF528062BA500B889FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QFKM74BY63;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.regor.assignment.astro-viewUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "astro-view";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F400DBE28062BA200B889FC /* Build configuration list for PBXProject "astro-view" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F400DEB28062BA500B889FC /* Debug */,
+				9F400DEC28062BA500B889FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F400DED28062BA500B889FC /* Build configuration list for PBXNativeTarget "astro-view" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F400DEE28062BA500B889FC /* Debug */,
+				9F400DEF28062BA500B889FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F400DF028062BA500B889FC /* Build configuration list for PBXNativeTarget "astro-viewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F400DF128062BA500B889FC /* Debug */,
+				9F400DF228062BA500B889FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F400DF328062BA500B889FC /* Build configuration list for PBXNativeTarget "astro-viewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F400DF428062BA500B889FC /* Debug */,
+				9F400DF528062BA500B889FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F400DBB28062BA200B889FC /* Project object */;
+}

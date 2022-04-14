@@ -27,5 +27,8 @@ final class AstronomyInteractor {
 // MARK: - AstronomyBusinessLogic
 
 extension AstronomyInteractor: AstronomyBusinessLogic {
-    func fetchAstronomyData() {}
+    func fetchAstronomyData() {
+        let response = Astronomy.Daily.Response()
+        presenter.presentData(response)
+    }
 }

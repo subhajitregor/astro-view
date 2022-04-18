@@ -32,6 +32,17 @@
 		9F400E642807966F00B889FC /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E632807966F00B889FC /* UITableView+Extensions.swift */; };
 		9F400E6828079B6000B889FC /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E6728079B6000B889FC /* CellReusable.swift */; };
 		9F400E6A28079BA900B889FC /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E6928079BA900B889FC /* UITableViewCell+Extensions.swift */; };
+		9F400E732808582A00B889FC /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E722808582A00B889FC /* EndpointType.swift */; };
+		9F400E752808592B00B889FC /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E742808592B00B889FC /* Service.swift */; };
+		9F400E7728085B9D00B889FC /* NetworkResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E7628085B9C00B889FC /* NetworkResponseError.swift */; };
+		9F400E792808B34000B889FC /* ServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E782808B34000B889FC /* ServiceConstants.swift */; };
+		9F400E7C280B01B000B889FC /* DailyPictureEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E7B280B01B000B889FC /* DailyPictureEndpoint.swift */; };
+		9F400E80280B04C000B889FC /* DailyPictureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E7F280B04C000B889FC /* DailyPictureService.swift */; };
+		9F400E82280B05C600B889FC /* AstronomyServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E81280B05C600B889FC /* AstronomyServiceManager.swift */; };
+		9F400E84280B075700B889FC /* AstonomyLoaderLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E83280B075700B889FC /* AstonomyLoaderLogic.swift */; };
+		9F400E86280C058100B889FC /* NetworkRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E85280C058100B889FC /* NetworkRequestError.swift */; };
+		9F400E89280C1CCB00B889FC /* PicOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E88280C1CCB00B889FC /* PicOfTheDay.swift */; };
+		9F400E8B280CA88400B889FC /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E8A280CA88400B889FC /* DateFormatter+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +92,17 @@
 		9F400E632807966F00B889FC /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		9F400E6728079B6000B889FC /* CellReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReusable.swift; sourceTree = "<group>"; };
 		9F400E6928079BA900B889FC /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		9F400E722808582A00B889FC /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		9F400E742808592B00B889FC /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		9F400E7628085B9C00B889FC /* NetworkResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseError.swift; sourceTree = "<group>"; };
+		9F400E782808B34000B889FC /* ServiceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConstants.swift; sourceTree = "<group>"; };
+		9F400E7B280B01B000B889FC /* DailyPictureEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPictureEndpoint.swift; sourceTree = "<group>"; };
+		9F400E7F280B04C000B889FC /* DailyPictureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPictureService.swift; sourceTree = "<group>"; };
+		9F400E81280B05C600B889FC /* AstronomyServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyServiceManager.swift; sourceTree = "<group>"; };
+		9F400E83280B075700B889FC /* AstonomyLoaderLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstonomyLoaderLogic.swift; sourceTree = "<group>"; };
+		9F400E85280C058100B889FC /* NetworkRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestError.swift; sourceTree = "<group>"; };
+		9F400E88280C1CCB00B889FC /* PicOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfTheDay.swift; sourceTree = "<group>"; };
+		9F400E8A280CA88400B889FC /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +158,9 @@
 				9F400E1928064F4000B889FC /* Routers */,
 				9F400DFE2806308B00B889FC /* ModuleBuilders */,
 				9F400DF928062D6300B889FC /* Storyboards */,
+				9F400E87280C1C0300B889FC /* Entities */,
 				9F400E0D28063B4500B889FC /* Common */,
+				9F400E6B2808337300B889FC /* Helpers */,
 				9F400DF728062D0500B889FC /* Assets */,
 				9F400DF828062D1F00B889FC /* Supporting Files */,
 			);
@@ -210,6 +234,7 @@
 				9F400E06280633B900B889FC /* AstronomyInteractor.swift */,
 				9F400E042806315900B889FC /* AstronomyPresenter.swift */,
 				9F400E1728064CEF00B889FC /* AstronomyModels.swift */,
+				9F400E83280B075700B889FC /* AstonomyLoaderLogic.swift */,
 			);
 			path = AstronomyView;
 			sourceTree = "<group>";
@@ -247,6 +272,7 @@
 				9F400E0F28063C5200B889FC /* UIStoryboard+Extentions.swift */,
 				9F400E632807966F00B889FC /* UITableView+Extensions.swift */,
 				9F400E6928079BA900B889FC /* UITableViewCell+Extensions.swift */,
+				9F400E8A280CA88400B889FC /* DateFormatter+Extensions.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -255,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				9F400E1228063FE100B889FC /* StoryboardConstants.swift */,
+				9F400E782808B34000B889FC /* ServiceConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -293,6 +320,76 @@
 				9F400E212806B8AB00B889FC /* AstronomyTableCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		9F400E6B2808337300B889FC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9F400E7D280B032600B889FC /* Services */,
+				9F400E6E2808339800B889FC /* ServiceManagers */,
+				9F400E6C2808337B00B889FC /* NetworkLayer */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9F400E6C2808337B00B889FC /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				9F400E71280857EC00B889FC /* ServiceRouter */,
+				9F400E70280857E300B889FC /* Encoder */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		9F400E6E2808339800B889FC /* ServiceManagers */ = {
+			isa = PBXGroup;
+			children = (
+				9F400E81280B05C600B889FC /* AstronomyServiceManager.swift */,
+			);
+			path = ServiceManagers;
+			sourceTree = "<group>";
+		};
+		9F400E70280857E300B889FC /* Encoder */ = {
+			isa = PBXGroup;
+			children = (
+				9F400E7628085B9C00B889FC /* NetworkResponseError.swift */,
+				9F400E85280C058100B889FC /* NetworkRequestError.swift */,
+			);
+			path = Encoder;
+			sourceTree = "<group>";
+		};
+		9F400E71280857EC00B889FC /* ServiceRouter */ = {
+			isa = PBXGroup;
+			children = (
+				9F400E722808582A00B889FC /* EndpointType.swift */,
+				9F400E742808592B00B889FC /* Service.swift */,
+			);
+			path = ServiceRouter;
+			sourceTree = "<group>";
+		};
+		9F400E7D280B032600B889FC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9F400E7E280B034C00B889FC /* DailyPicture */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9F400E7E280B034C00B889FC /* DailyPicture */ = {
+			isa = PBXGroup;
+			children = (
+				9F400E7B280B01B000B889FC /* DailyPictureEndpoint.swift */,
+				9F400E7F280B04C000B889FC /* DailyPictureService.swift */,
+			);
+			path = DailyPicture;
+			sourceTree = "<group>";
+		};
+		9F400E87280C1C0300B889FC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9F400E88280C1CCB00B889FC /* PicOfTheDay.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,20 +527,31 @@
 				9F400DC728062BA200B889FC /* AppDelegate.swift in Sources */,
 				9F400E1C28064F8000B889FC /* AstronomyRouter.swift in Sources */,
 				9F400E1828064CEF00B889FC /* AstronomyModels.swift in Sources */,
+				9F400E84280B075700B889FC /* AstonomyLoaderLogic.swift in Sources */,
 				9F400E642807966F00B889FC /* UITableView+Extensions.swift in Sources */,
 				9F400E07280633B900B889FC /* AstronomyInteractor.swift in Sources */,
 				9F400DFD2806304800B889FC /* AstronomyViewController.swift in Sources */,
+				9F400E80280B04C000B889FC /* DailyPictureService.swift in Sources */,
+				9F400E7728085B9D00B889FC /* NetworkResponseError.swift in Sources */,
 				9F400E1328063FE100B889FC /* StoryboardConstants.swift in Sources */,
 				9F400E16280642BF00B889FC /* StoryboardIdentifiable.swift in Sources */,
+				9F400E732808582A00B889FC /* EndpointType.swift in Sources */,
 				9F400E6A28079BA900B889FC /* UITableViewCell+Extensions.swift in Sources */,
 				9F400E1028063C5200B889FC /* UIStoryboard+Extentions.swift in Sources */,
+				9F400E8B280CA88400B889FC /* DateFormatter+Extensions.swift in Sources */,
 				9F400E1E28064FA400B889FC /* AstronomyRoute.swift in Sources */,
 				9F400E222806B8AB00B889FC /* AstronomyTableCell.swift in Sources */,
 				9F400E0C28063A9C00B889FC /* SceneBuilder.swift in Sources */,
 				9F400E6828079B6000B889FC /* CellReusable.swift in Sources */,
 				9F400E01280630DB00B889FC /* AstronomyModule.swift in Sources */,
+				9F400E792808B34000B889FC /* ServiceConstants.swift in Sources */,
+				9F400E86280C058100B889FC /* NetworkRequestError.swift in Sources */,
 				9F400E622807958200B889FC /* NibIdentifiable.swift in Sources */,
+				9F400E82280B05C600B889FC /* AstronomyServiceManager.swift in Sources */,
+				9F400E752808592B00B889FC /* Service.swift in Sources */,
+				9F400E89280C1CCB00B889FC /* PicOfTheDay.swift in Sources */,
 				9F400DC928062BA200B889FC /* SceneDelegate.swift in Sources */,
+				9F400E7C280B01B000B889FC /* DailyPictureEndpoint.swift in Sources */,
 				9F400E052806315900B889FC /* AstronomyPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

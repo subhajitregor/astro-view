@@ -16,11 +16,14 @@ protocol AstronomyRoutingLogic {}
 final class AstronomyInteractor {
     private let presenter: AstronomyPresentationLogic
     private let router: AstronomyRoutingLogic
+    private let service: AstronomyServiceLogic
     
     init(presenter: AstronomyPresentationLogic,
-         router: AstronomyRoutingLogic) {
+         router: AstronomyRoutingLogic,
+         service: AstronomyServiceLogic) {
         self.presenter = presenter
         self.router = router
+        self.service = service
     }
 }
 
@@ -28,7 +31,19 @@ final class AstronomyInteractor {
 
 extension AstronomyInteractor: AstronomyBusinessLogic {
     func fetchAstronomyData() {
-        let response = Astronomy.Daily.Response()
-        presenter.presentData(response)
+        service.fetchAstronomy { [weak self] result in
+            guard let `self` = self else { return }
+            switch result {
+                
+            case .success(let entity):
+                let response = Astronomy.Daily.Response(imageUrl: entity.imageUrl,
+                                                        titleText: entity.title,
+                                                        shortDescription: entity.explanation)
+                self.presenter.presentData(response)
+            case .failure(let error):
+                self.presenter.presentError(error)
+            }
+        }
+        
     }
 }

@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol AstronomyLoaderLogic {
+protocol AstronomyServiceLogic {
     func fetchAstronomy(completion: @escaping (Result<PicOfTheDay, Error>) -> ())
 }

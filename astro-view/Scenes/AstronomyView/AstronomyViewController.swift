@@ -52,7 +52,9 @@ private extension AstronomyViewController {
 
 extension AstronomyViewController: AstronomyDisplayLogic {
     func displaySuccess(_ viewModel: [Astronomy.Daily.ViewModel]) {
-        self.viewModels = viewModel
+        DispatchQueue.main.async {
+            self.viewModels = viewModel
+        }
     }
     func displayError() {}
 }

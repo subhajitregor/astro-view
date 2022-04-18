@@ -24,8 +24,10 @@ extension AstronomyViewController: StoryboardIdentifiable {}
 extension AstronomyModule: SceneBuilder {
     func build() -> AstronomyViewController {
         let viewController: AstronomyViewController = UIStoryboard.storyboard(.astronomy).createViewController()
+        
         let presenter = AstronomyPresenter(displayLogic: viewController)
-        let interactor = AstronomyInteractor(presenter: presenter, router: externalDependencies.router)
+        let service: AstronomyServiceLogic = AstronomyServiceManager() as AstronomyServiceLogic
+        let interactor = AstronomyInteractor(presenter: presenter, router: externalDependencies.router, service: service)
         
         viewController.setInteractor(interactor)
         

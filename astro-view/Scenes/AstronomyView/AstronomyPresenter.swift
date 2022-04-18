@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 protocol AstronomyPresentationLogic {
     func presentData(_ response: Astronomy.Daily.Response)
-    func presentError()
+    func presentError(_ error: Error)
 }
 
 final class AstronomyPresenter {
@@ -28,13 +29,17 @@ extension AstronomyPresenter: AstronomyPresentationLogic {
         viewController?.displaySuccess(viewModels)
     }
     
-    func presentError() {}
+    func presentError(_ error: Error) {}
 }
 
 // MARK: - Private
 
 extension AstronomyPresenter {
     func createViewModelToDisplay(models: Astronomy.Daily.Response) -> [Astronomy.Daily.ViewModel] {
-        [Astronomy.Daily.ViewModel()]
+        [Astronomy.Daily.ViewModel(imageUrl: models.imageUrl,
+                                   titleText: AttributedString(models.titleText ?? "",
+                                                               attributes: AttributeContainer.titleAttributeContainer),
+                                   shortDescription: AttributedString(models.shortDescription ?? "",
+                                                                      attributes: AttributeContainer.descriptionAttributeContainer))]
     }
 }

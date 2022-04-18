@@ -43,6 +43,9 @@
 		9F400E86280C058100B889FC /* NetworkRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E85280C058100B889FC /* NetworkRequestError.swift */; };
 		9F400E89280C1CCB00B889FC /* PicOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E88280C1CCB00B889FC /* PicOfTheDay.swift */; };
 		9F400E8B280CA88400B889FC /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E8A280CA88400B889FC /* DateFormatter+Extensions.swift */; };
+		9F400E8F280D681500B889FC /* AttributeContainer+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E8E280D681400B889FC /* AttributeContainer+Extentions.swift */; };
+		9F400E91280D6BD300B889FC /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E90280D6BD300B889FC /* ImageService.swift */; };
+		9F400E93280D749A00B889FC /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F400E92280D749A00B889FC /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,9 @@
 		9F400E85280C058100B889FC /* NetworkRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestError.swift; sourceTree = "<group>"; };
 		9F400E88280C1CCB00B889FC /* PicOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfTheDay.swift; sourceTree = "<group>"; };
 		9F400E8A280CA88400B889FC /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		9F400E8E280D681400B889FC /* AttributeContainer+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AttributeContainer+Extentions.swift"; sourceTree = "<group>"; };
+		9F400E90280D6BD300B889FC /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		9F400E92280D749A00B889FC /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +279,8 @@
 				9F400E632807966F00B889FC /* UITableView+Extensions.swift */,
 				9F400E6928079BA900B889FC /* UITableViewCell+Extensions.swift */,
 				9F400E8A280CA88400B889FC /* DateFormatter+Extensions.swift */,
+				9F400E8E280D681400B889FC /* AttributeContainer+Extentions.swift */,
+				9F400E92280D749A00B889FC /* UIImageView+Extensions.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -363,6 +371,7 @@
 			children = (
 				9F400E722808582A00B889FC /* EndpointType.swift */,
 				9F400E742808592B00B889FC /* Service.swift */,
+				9F400E90280D6BD300B889FC /* ImageService.swift */,
 			);
 			path = ServiceRouter;
 			sourceTree = "<group>";
@@ -538,13 +547,16 @@
 				9F400E732808582A00B889FC /* EndpointType.swift in Sources */,
 				9F400E6A28079BA900B889FC /* UITableViewCell+Extensions.swift in Sources */,
 				9F400E1028063C5200B889FC /* UIStoryboard+Extentions.swift in Sources */,
+				9F400E93280D749A00B889FC /* UIImageView+Extensions.swift in Sources */,
 				9F400E8B280CA88400B889FC /* DateFormatter+Extensions.swift in Sources */,
 				9F400E1E28064FA400B889FC /* AstronomyRoute.swift in Sources */,
 				9F400E222806B8AB00B889FC /* AstronomyTableCell.swift in Sources */,
 				9F400E0C28063A9C00B889FC /* SceneBuilder.swift in Sources */,
+				9F400E91280D6BD300B889FC /* ImageService.swift in Sources */,
 				9F400E6828079B6000B889FC /* CellReusable.swift in Sources */,
 				9F400E01280630DB00B889FC /* AstronomyModule.swift in Sources */,
 				9F400E792808B34000B889FC /* ServiceConstants.swift in Sources */,
+				9F400E8F280D681500B889FC /* AttributeContainer+Extentions.swift in Sources */,
 				9F400E86280C058100B889FC /* NetworkRequestError.swift in Sources */,
 				9F400E622807958200B889FC /* NibIdentifiable.swift in Sources */,
 				9F400E82280B05C600B889FC /* AstronomyServiceManager.swift in Sources */,

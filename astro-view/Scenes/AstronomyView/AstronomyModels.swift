@@ -10,7 +10,12 @@ import Foundation
 enum Astronomy {
     enum Daily {
         struct Request {}
-        struct Response {}
+        struct Response {
+            var imageUrl: String?
+            var titleText: String?
+            var shortDescription: String?
+        }
+        
         struct ViewModel: AstronomyTableCellData {
             var imageUrl: String?
             var titleText: AttributedString?

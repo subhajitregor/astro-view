@@ -11,7 +11,7 @@ final class AstronomyServiceManager: ServiceRouter, AstronomyServiceManager.Serv
     typealias Services = DailyPictureService
 }
 
-extension AstronomyServiceManager: AstronomyLoaderLogic {
+extension AstronomyServiceManager: AstronomyServiceLogic {
     func fetchAstronomy(completion: @escaping (Result<PicOfTheDay, Error>) -> ()) {
         self.fetchDailyPicture { result in
             switch result {

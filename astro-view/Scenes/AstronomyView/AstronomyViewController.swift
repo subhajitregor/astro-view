@@ -40,6 +40,7 @@ final class AstronomyViewController: UIViewController {
 
 private extension AstronomyViewController {
     func registerCells() {
+        tableView.estimatedRowHeight = 50
         tableView.register(AstronomyTableCell.self)
     }
     

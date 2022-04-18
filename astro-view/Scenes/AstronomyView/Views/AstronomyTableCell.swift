@@ -46,8 +46,12 @@ private extension AstronomyTableCell {
     }
     
     func setData() {
-        astronomyImageView.downloadImage(from: cellData?.imageUrl)
+        astronomyImageView.loadImage(cellData?.imageUrl)
         astronomyTitle.attributedText = NSAttributedString(cellData?.titleText ?? "")
         astronomyShortDescription.attributedText = NSAttributedString(cellData?.shortDescription ?? "")
+        
+//        astronomyImageView.sizeToFit()
+        astronomyTitle.sizeToFit()
+        astronomyShortDescription.sizeToFit()
     }
 }

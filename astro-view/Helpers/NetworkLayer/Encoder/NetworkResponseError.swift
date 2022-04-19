@@ -41,7 +41,7 @@ enum NetworkResponseError: Error {
 
 // MARK: NetworkResponseError Builder
 
-final class ServiceResponse {
+final class ServiceResponseError {
     class func handleNetworkResponse(_ response: URLResponse?) -> Result<Int,Error> {
         guard let response = response as? HTTPURLResponse else {
             return .failure(NetworkResponseError.Custom(message: "Response is not of Type: HTTPURLResponse"))

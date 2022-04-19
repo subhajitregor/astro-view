@@ -66,12 +66,12 @@ extension AstronomyViewController: AstronomyDisplayLogic {
     func displayError(_ error: Error) {
         if let error = error as? NetworkRequestError {
             switch error {
-            case .cancelledByUser:
-                break
-            case .waitingForConnectivity:
+            case .noInternet, .timeOut:
                 DispatchQueue.main.async {
                     self.showErrorView(true)
                 }
+            case .notHandled, .cancelledByUser:
+                break
             }
         }
     }

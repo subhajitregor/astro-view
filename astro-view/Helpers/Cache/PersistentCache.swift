@@ -45,6 +45,4 @@ extension PersistentCache {
             
         }
     }
-    
-    
 }

@@ -29,7 +29,9 @@ extension AstronomyPresenter: AstronomyPresentationLogic {
         viewController?.displaySuccess(viewModels)
     }
     
-    func presentError(_ error: Error) {}
+    func presentError(_ error: Error) {
+        viewController?.displayError(error)
+    }
 }
 
 // MARK: - Private

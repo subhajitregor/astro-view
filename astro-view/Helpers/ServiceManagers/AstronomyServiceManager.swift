@@ -7,13 +7,18 @@
 
 import Foundation
 
-final class AstronomyServiceManager: ServiceRouter, AstronomyServiceManager.Services {
+final class AstronomyServiceManager: ServiceRouter<PersistentCache>, AstronomyServiceManager.Services {
+    
     typealias Services = DailyPictureService
+    
+    var dailyPictureEndpoint: EndPointType = DailyPictureEndpoint()
+    
 }
 
 extension AstronomyServiceManager: AstronomyServiceLogic {
     func fetchAstronomy(completion: @escaping (Result<PicOfTheDay, Error>) -> ()) {
-        self.fetchDailyPicture { result in
+        self.fetchDailyPicture { [weak self] result in
+            guard let `self` = self else { return }
             switch result {
             case .success(let data):
                 guard let data = data else {
@@ -30,7 +35,16 @@ extension AstronomyServiceManager: AstronomyServiceLogic {
                     completion(.failure(NetworkResponseError.Custom(message: error.localizedDescription)))
                 }
             case .failure(let error):
-                completion(.failure(error))
+                self.serviceStore?.fetchFromCache(for: self.dailyPictureEndpoint.urlRequest)
+                { (result: Result<PicOfTheDay, Error>) in
+                    switch result {
+                    case .success(let success):
+                        completion(.success(success))
+                        completion(.failure(error))
+                    case .failure(let failure):
+                        completion(.failure(failure))
+                    }
+                }
             }
         }
     }

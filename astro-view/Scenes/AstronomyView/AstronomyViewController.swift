@@ -9,11 +9,12 @@ import UIKit
 
 protocol AstronomyDisplayLogic: AnyObject {
     func displaySuccess(_ viewModel: [Astronomy.Daily.ViewModel])
-    func displayError()
+    func displayError(_ error: Error)
 }
 
 final class AstronomyViewController: UIViewController {
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet private var tableView: UITableView!
+    @IBOutlet private var noInternetView: NoInternetView!
     
     private var interactor: AstronomyBusinessLogic?
     private var viewModels: [Astronomy.Daily.ViewModel] = [] {
@@ -40,12 +41,15 @@ final class AstronomyViewController: UIViewController {
 
 private extension AstronomyViewController {
     func registerCells() {
-        tableView.estimatedRowHeight = 50
         tableView.register(AstronomyTableCell.self)
     }
     
     func fetchData() {
         interactor?.fetchAstronomyData()
+    }
+    
+    func showErrorView(_ show: Bool) {
+        noInternetView.isHidden = !show
     }
 }
 
@@ -54,10 +58,23 @@ private extension AstronomyViewController {
 extension AstronomyViewController: AstronomyDisplayLogic {
     func displaySuccess(_ viewModel: [Astronomy.Daily.ViewModel]) {
         DispatchQueue.main.async {
+            self.showErrorView(false)
             self.viewModels = viewModel
         }
     }
-    func displayError() {}
+    
+    func displayError(_ error: Error) {
+        if let error = error as? NetworkRequestError {
+            switch error {
+            case .cancelledByUser:
+                break
+            case .waitingForConnectivity:
+                DispatchQueue.main.async {
+                    self.showErrorView(true)
+                }
+            }
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource

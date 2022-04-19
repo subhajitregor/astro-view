@@ -19,8 +19,8 @@ struct PicOfTheDay: Codable {
     }
 }
 
-extension PicOfTheDay {
-    static let dateDecodingFormat: DateFormatter = {
+extension PicOfTheDay: DateDecodable {
+    static var dateDecodingFormat: DateFormatter {
         DateFormatter.yyyyMMdd_hyphenated
-    }()
+    }
 }

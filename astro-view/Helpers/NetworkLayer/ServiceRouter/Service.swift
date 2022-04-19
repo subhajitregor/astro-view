@@ -13,13 +13,16 @@ protocol ServiceCancellable {
 }
 
 protocol ServiceRouterProtocol {
+    associatedtype PersistantStore: CacheUpdateService
+    var serviceStore: PersistantStore? { get set }
     func request(_ route: EndPointType, completion: @escaping NetworkRouterCompletion)
 }
 
-class ServiceRouter: NSObject, ServiceRouterProtocol, ServiceCancellable, URLSessionTaskDelegate {
-    
+class ServiceRouter<PD>: NSObject, ServiceRouterProtocol, ServiceCancellable, URLSessionTaskDelegate where PD: CacheUpdateService {
+    typealias PersistantStore = PD
     private var task: URLSessionTask?
     private var completion: NetworkRouterCompletion?
+    var serviceStore: PersistantStore?
     
     func request(_ route: EndPointType, completion: @escaping NetworkRouterCompletion) {
         self.completion = completion
@@ -38,6 +41,7 @@ class ServiceRouter: NSObject, ServiceRouterProtocol, ServiceCancellable, URLSes
             
             switch responseResult {
             case .success:
+                self.serviceStore?.saveInCache(data: data, response: response, for: route.urlRequest)
                 completion(.success(data))
             case .failure(let error):
                 completion(.failure(error))

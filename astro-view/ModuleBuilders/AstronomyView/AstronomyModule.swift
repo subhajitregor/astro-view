@@ -26,7 +26,9 @@ extension AstronomyModule: SceneBuilder {
         let viewController: AstronomyViewController = UIStoryboard.storyboard(.astronomy).createViewController()
         
         let presenter = AstronomyPresenter(displayLogic: viewController)
-        let service: AstronomyServiceLogic = AstronomyServiceManager() as AstronomyServiceLogic
+        let astronomyServiceManager = AstronomyServiceManager()
+        let service: AstronomyServiceLogic = astronomyServiceManager
+        astronomyServiceManager.serviceStore = PersistentCache()
         let interactor = AstronomyInteractor(presenter: presenter, router: externalDependencies.router, service: service)
         
         viewController.setInteractor(interactor)

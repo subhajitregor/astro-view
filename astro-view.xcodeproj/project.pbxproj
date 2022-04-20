@@ -121,6 +121,7 @@
 		9F400E9F280DE91900B889FC /* CacheError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheError.swift; sourceTree = "<group>"; };
 		9F400EA4280E27F300B889FC /* DateDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecodable.swift; sourceTree = "<group>"; };
 		9FEE2411280F278F000D5885 /* CodableImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableImage.swift; sourceTree = "<group>"; };
+		9FEE2413280F4AA5000D5885 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +152,7 @@
 		9F400DBA28062BA200B889FC = {
 			isa = PBXGroup;
 			children = (
+				9FEE2413280F4AA5000D5885 /* README.md */,
 				9F400DC528062BA200B889FC /* astro-view */,
 				9F400DDC28062BA500B889FC /* astro-viewTests */,
 				9F400DE628062BA500B889FC /* astro-viewUITests */,
